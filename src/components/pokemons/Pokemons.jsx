@@ -72,11 +72,11 @@ export default function Pokemons() {
 
     const skeletons = Array.from({ length: ITEMS_PER_PAGE })
     return (
-        <section className="p-4 bg-slate-50 shadow-lg rounded-xl border border-slate-300 mb-10">
+        <section className="p-4 bg-slate-50 shadow-lg rounded-xl border border-slate-300 mb-10 min-h-[70vh]">
             <div className='flex justify-between items-center'>
                 <div className="mb-4">
                     <h1 className="font-bold text-2xl">
-                        Elige tu equipo de Pokémonsf
+                        Eliges tu equipo de Pokémons
                     </h1>
                     <span className="text-slate-400 text-sm">
                         Mostrando {visiblePokemons.length} de {filteredPokemons.length}
