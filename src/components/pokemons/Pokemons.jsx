@@ -76,7 +76,7 @@ export default function Pokemons() {
             <div className='flex justify-between items-center'>
                 <div className="mb-4">
                     <h1 className="font-bold text-2xl">
-                        Eliges tu equipo de Pokémons
+                        Elige tu equipo de Pokémons
                     </h1>
                     <span className="text-slate-400 text-sm">
                         Mostrando {visiblePokemons.length} de {filteredPokemons.length}
