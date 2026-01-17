@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@source "../../**/*.{js,jsx}";
+
+#root {
+  padding: 0 !important;
+  margin: 0 !important;
+}
