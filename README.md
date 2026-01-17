@@ -7,7 +7,7 @@
 
 ### Clonar el repositorio
 ```bash
-git clone https://github.com/probablynotannie/pokemon-battle
+git clone https://github.com/probablynotannie/prueba-tecnica
 ```
 
 ### Entrar al proyecto
@@ -24,7 +24,7 @@ npm install
 npm run dev
 ```
 
-### La app deberái de estar disponible en localhost:5173 a no ser que este ocupado
+### La app debería de estar disponible en localhost:5173 a no ser que este ocupado
 
 > http://localhost:5173
 
@@ -46,6 +46,22 @@ npm run dev
 ## Estructura de carpetas, archivos y arquitectura
 
 El proyecto sigue una **arquitectura modular basada en dominios**, orientada a mantener el código organizado, escalable y fácil de mantener.
+He decidido organizar el código por funcionalidades principales en lugar de por tipo técnico.
+Esta estructura favorece la separación de responsabilidades, mejora la escalabilidad y facilita el mantenimiento del proyecto.
+
+- pokemons/: listado y exploración de Pokémon (filtros, paginación y vistas).
+
+- team/: construcción y gestión de equipos Pokémon.
+
+- combat/: selección de equipos y simulación del combate.
+
+#### Módulos compartidos
+
+- api/: comunicación con la API externa.
+- hooks/: lógica reutilizable para obtención de datos.
+- store/: estado global con Zustand.
+- utils/: lógica de combate independiente de la UI.
+- structure/: componentes estructurales reutilizables (Header, Footer, Modal).
 
 ---
 
@@ -98,6 +114,7 @@ src/
 ├── App.tsx                               # Componente raíz de la aplicación
 ├── main.tsx                              # Punto de entrada (React + Vite)
 └── index.css                             # Estilos globales (Tailwind)
+```
 
 
 
