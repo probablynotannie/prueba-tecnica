@@ -39,7 +39,7 @@ function Boxy({ visiblePokemons, isInDraft, getStat, addToDraft }) {
                     >
                         {alreadyAdded && (
                             <div className="absolute inset-0 bg-black/30 rounded-2xl z-10 flex items-start pt-5 justify-center text-red-700 font-semibold text-sm">
-                                <span className='bg-red-500 p-1 rounded-lg text-white'>  Ya en el equipo</span>
+                                <span className='bg-red-500 p-1 rounded-lg text-white'>  Ya está en el equipo</span>
                             </div>
                         )}
                         <div className="flex justify-center mb-2">
