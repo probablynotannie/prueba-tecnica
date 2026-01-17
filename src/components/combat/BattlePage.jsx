@@ -51,6 +51,7 @@ export default function BattlePage() {
       <div className=" mb-4 grid md:grid-cols-2 gap-10">
         <div className="rounded-xl border border-slate-300 bg-white shadow-sm p-5 flex flex-col gap-4 h-fit">
           <TeamSelector
+            placeholder={"— Equipo A  —"}
             label={"— Equipo A —"}
             teams={teams}
             value={teamAId}
@@ -60,6 +61,7 @@ export default function BattlePage() {
         </div>
         <div className="rounded-xl border border-slate-300 bg-white shadow-sm p-5 flex flex-col gap-4 h-fit">
           <TeamSelector
+            placeholder={"— Equipo B  —"}
             label={"— Equipo B  —"}
             value={teamBId}
             teams={teams}

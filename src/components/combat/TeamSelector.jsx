@@ -18,7 +18,7 @@ export default function TeamSelector({
       <select
         value={value}
         onChange={onChange}
-        className="border rounded-lg p-2 text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="border rounded-lg p-2 text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 border-2 border-indigo-400 overflow-hidden"
       >
         <option value="">{placeholder}</option>
         {teams.map((team) => (
