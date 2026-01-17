@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useTeamsStore } from "../../store/teamStore";
 import { simulateBattle } from "../../utils/battleLogic";
 import TeamPreview from "./TeamPreview";
-import { GoDotFill } from "react-icons/go";
 import { FaTrophy } from "react-icons/fa";
 import TeamSelector from "./TeamSelector";
+import BattleLoader from "./BattleLoader";
 export default function BattlePage() {
   const teams = useTeamsStore((state) => state.teams);
   const [teamAId, setTeamAId] = useState("");
@@ -12,11 +12,9 @@ export default function BattlePage() {
   const [result, setResult] = useState(null);
   const teamA = teams.find((t) => t.id === teamAId);
   const teamB = teams.find((t) => t.id === teamBId);
-
   const [isBattling, setIsBattling] = useState(false);
   const handleBattle = () => {
     if (!teamA || !teamB) return;
-    console.log(teamA);
     setIsBattling(true);
     setResult(null);
 
@@ -50,65 +48,23 @@ export default function BattlePage() {
   return (
     <div className="rounded-xl border shadow-lg hover:shadow-xl transition duration-300 bg-slate-50 p-5 border-slate-200">
       <h1 className="text-2xl font-bold mb-4">Combate Pokémon</h1>
-      <div className=" mb-4 grid grid-cols-2 gap-10">
+      <div className=" mb-4 grid md:grid-cols-2 gap-10">
         <div className="rounded-xl border border-slate-300 bg-white shadow-sm p-5 flex flex-col gap-4 h-fit">
-          <h2 className="text-lg font-semibold text-slate-800 text-center">
-            Selecciona tu equipo
-          </h2>
-          <p className="text-xs text-slate-500 text-center">
-            Elige un equipo guardado para el combate
-          </p>
-          <select
+          <TeamSelector
+            label={"— Equipo A —"}
+            teams={teams}
             value={teamAId}
             onChange={(e) => setTeamAId(e.target.value)}
-            className="
-      border rounded-lg p-2 text-sm
-      focus:outline-none focus:ring-2 focus:ring-blue-500
-      bg-slate-50
-    "
-          >
-            <option value="">— Equipo A —</option>
-            {teams.map((team) => (
-              <option key={team.id} value={team.id}>
-                {team.name}
-              </option>
-            ))}
-          </select>
-          {!teamAId && (
-            <span className="text-xs text-slate-400 text-center">
-              Ningún equipo seleccionado
-            </span>
-          )}
+          />
           <TeamPreview team={teamA} label="Equipo A" />
         </div>
         <div className="rounded-xl border border-slate-300 bg-white shadow-sm p-5 flex flex-col gap-4 h-fit">
-          <h2 className="text-lg font-semibold text-slate-800 text-center">
-            Selecciona tu equipo
-          </h2>
-          <p className="text-xs text-slate-500 text-center">
-            Elige un equipo guardado para el combate
-          </p>
-          <select
+          <TeamSelector
+            label={"— Equipo B  —"}
             value={teamBId}
+            teams={teams}
             onChange={(e) => setTeamBId(e.target.value)}
-            className="
-      border rounded-lg p-2 text-sm
-      focus:outline-none focus:ring-2 focus:ring-blue-500
-      bg-slate-50
-    "
-          >
-            <option value="">— Equipo A —</option>
-            {teams.map((team) => (
-              <option key={team.id} value={team.id}>
-                {team.name}
-              </option>
-            ))}
-          </select>
-          {!teamBId && (
-            <span className="text-xs text-slate-400 text-center">
-              Ningún equipo seleccionado
-            </span>
-          )}
+          />
           <TeamPreview team={teamB} label="Equipo B" />
         </div>
       </div>
@@ -132,7 +88,6 @@ export default function BattlePage() {
               const defLoser = getStat(round.loser, "defense");
               const speedWinner = getStat(round.winner, "speed");
               const speedLoser = getStat(round.loser, "speed");
-              console.log(teamA);
               const reason =
                 atkWinner > defLoser
                   ? `Ataque (${atkWinner}) > Defensa (${defLoser})`
@@ -145,7 +100,7 @@ export default function BattlePage() {
                   <div className="flex items-start gap-2">
                     <FaTrophy className="text-xl text-pink-700" />{" "}
                     <span className="capitalize text-pink-600 font-semibold">
-                      {teamA.name}
+                      {round.winner.name}
                     </span>{" "}
                     derrota a{" "}
                     <span className="capitalize text-pink-600 font-semibold">
