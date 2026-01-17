@@ -9,7 +9,6 @@ import {
 import { useTeamsStore } from "../../store/teamStore";
 import SortablePokemon from "./SortablePokemon";
 import { DragOverlay } from "@dnd-kit/core";
-
 export default function TeamBuilder({ onClose }) {
   const [activePokemon, setActivePokemon] = useState(null);
   const draftTeam = useTeamsStore((state) => state.draftTeam);
@@ -41,13 +40,10 @@ export default function TeamBuilder({ onClose }) {
       ),
     );
   };
-
   return (
     <section className="bg-white rounded-2xl shadow-xl border border-slate-200 max-h-[80vh] flex flex-col">
-      {/* HEADER */}
       <header className="flex justify-between items-center px-4 py-3 border-b border-slate-200">
         <h2 className="text-lg font-semibold text-slate-800">Mi equipo</h2>
-
         <div className="flex items-center gap-3">
           <span
             className={`text-xs px-2 py-1 rounded-full font-medium
@@ -71,8 +67,6 @@ export default function TeamBuilder({ onClose }) {
           )}
         </div>
       </header>
-
-      {/* CONTENT */}
       <div className="flex-1 overflow-y-auto p-4">
         <DndContext
           collisionDetection={closestCenter}
@@ -96,6 +90,10 @@ export default function TeamBuilder({ onClose }) {
               ))}
             </ul>
           </SortableContext>
+
+          <DragOverlay adjustScale={false}>
+            {activePokemon ? <SortablePokemon pokemon={activePokemon} /> : null}
+          </DragOverlay>
         </DndContext>
 
         <input
@@ -126,8 +124,6 @@ export default function TeamBuilder({ onClose }) {
           </div>
         </div>
       </div>
-
-      {/* FOOTER */}
       <footer className="px-4 py-3 border-t border-slate-200 bg-slate-50">
         <div className="flex gap-2">
           <button

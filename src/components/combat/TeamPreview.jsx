@@ -14,7 +14,7 @@ export default function TeamPreview({ team, label }) {
       </h4>
 
       <div className="space-y-2 text-sm">
-        {team.pokemons.map((pokemon, index) => {
+        {team.pokemons.map((pokemon) => {
           const attack = getStat(pokemon, "attack");
           const defense = getStat(pokemon, "defense");
           const speed = getStat(pokemon, "speed");
