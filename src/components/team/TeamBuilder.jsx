@@ -59,7 +59,7 @@ export default function TeamBuilder({ onClose }) {
           {onClose && (
             <button
               onClick={onClose}
-              className="text-slate-400 hover:text-slate-700 transition"
+              className="text-slate-400 hover:text-slate-700 transition hover:cursor-pointer"
               aria-label="Cerrar"
             >
               ✕
