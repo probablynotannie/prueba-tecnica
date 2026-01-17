@@ -4,6 +4,7 @@ import { simulateBattle } from "../../utils/battleLogic";
 import TeamPreview from "./TeamPreview";
 import { GoDotFill } from "react-icons/go";
 import { FaTrophy } from "react-icons/fa";
+import TeamSelector from "./TeamSelector";
 export default function BattlePage() {
   const teams = useTeamsStore((state) => state.teams);
   const [teamAId, setTeamAId] = useState("");
