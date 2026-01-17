@@ -33,3 +33,18 @@ npm run dev
 ### La app deberái de estar disponible en localhost:5173 a no ser que este ocupado
 
 > http://localhost:5173
+
+
+## Versiones utilizadas
+
+- Node.js: 18.x
+- React: 18.x
+- Vite: 7.2.4
+- Tailwind CSS: 4.1.18
+- Zustand: 5.0.10
+- @dnd-kit/core: 6.3.1
+- tanstack: 5.90.17
+- react.icons 5.5.0
+- vitest 7.2.4
+
+
