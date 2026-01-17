@@ -35,7 +35,7 @@ export default function TeamPreview({ team, label }) {
                 />
               )}
               <span className="capitalize font-medium w-24">
-                {pokemon.name}
+                {pokemon.name}  
               </span>
               <div className="flex gap-3 text-xs text-slate-600">
                 <span className="flex gap-1 items-center">

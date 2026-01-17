@@ -86,7 +86,7 @@ export default function Pokemons() {
                     onClick={() => setOpen(true)}
                     className="bg-slate-600 hover:bg-pink-600 text-white px-4 py-2 rounded-lg h-fit hover:scale-105 hover:cursor-pointer transition duration-300"
                 >
-                    equipo {draftTeam.length} / 6
+                  Nuevo equipo {draftTeam.length} / 6
                 </button>
             </div>
             <Modal isOpen={open} onClose={() => setOpen(false)}>
