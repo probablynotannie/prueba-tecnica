@@ -2,7 +2,7 @@
 ![2b1dfec19b945a19ac39641278a6a799](https://github.com/user-attachments/assets/52e1a2af-95f6-49b7-8300-7006695f4091)
 
 # Prueba técnica - combate de Pokemons
-> https://pokemon-battle-lime.vercel.app
+> https://prueba-tecnica-snowy-seven.vercel.app
 
 ## Instalación y ejecución
 
