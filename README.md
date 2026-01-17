@@ -1,12 +1,12 @@
 
 ![2b1dfec19b945a19ac39641278a6a799](https://github.com/user-attachments/assets/52e1a2af-95f6-49b7-8300-7006695f4091)
 
-# Prueba técnica - combate de pokemons
+# Prueba técnica - combate de Pokemons
 > https://pokemon-battle-lime.vercel.app
 
 ## Instalación y ejecución
 
-### Clonar el repositorio
+### Clonar el repositorio usando terminal
 ```bash
 git clone https://github.com/probablynotannie/prueba-tecnica
 ```
@@ -46,7 +46,6 @@ npm run dev
 
 ## Estructura de carpetas, archivos y arquitectura
 
-El proyecto sigue una **arquitectura modular basada en dominios**, orientada a mantener el código organizado, escalable y fácil de mantener.
 He decidido organizar el código por funcionalidades principales en lugar de por tipo técnico.
 Esta estructura favorece la separación de responsabilidades, mejora la escalabilidad y facilita el mantenimiento del proyecto.
 
@@ -71,14 +70,14 @@ Esta estructura favorece la separación de responsabilidades, mejora la escalabi
 ```text
 src/
 ├── api/
-│   └── pokemonApi.js                   # Llama a la api de pokemons listado / detalles
+│   └── pokemonApi.js                    # Llama a la api de pokemons listado / detalles
 │
 ├── components/
 │   ├── combat/
-│   │   ├── BattleLoader.jsx            # Un placeholder para simular la batalla
-│   │   ├── BattlePage.jsx              # Vista principal del combate
-│   │   ├── TeamPreview.jsx             # Información de pokemons por equipo
-│   │   └── TeamSelector.jsx            # Selector de equipos de combate
+│   │   ├── BattleLoader.jsx             # Un placeholder para simular la batalla
+│   │   ├── BattlePage.jsx               # Vista principal del combate
+│   │   ├── TeamPreview.jsx              # Información de pokemons por equipo
+│   │   └── TeamSelector.jsx             # Selector de equipos de combate
 │   │
 │   ├── pokemons/
 │   │   ├── View/                        
@@ -90,8 +89,8 @@ src/
 │   │   └── Pokemons.jsx                 # Vista principal para sacar datos de los pokemons
 │   │
 │   ├── team/
-│   │   ├── SortablePokemon.tsx          # Información de pokemon + posibilidad de borrar del equipo
-│   │   └── TeamBuilder.tsx              # Constructor de equipos de pokemon + drag & drop
+│   │   ├── SortablePokemon.jsx          # Información de pokemon + posibilidad de borrar del equipo
+│   │   └── TeamBuilder.jsx              # Constructor de equipos de pokemon + drag & drop
 │   │
 │   └── structure/
 │       ├── Header.tsx                   # Cabecera de la aplicación
@@ -103,14 +102,14 @@ src/
 │   └── usePokemonDetails.js             # Hook para sacar detalles por nombre de un pokemon
 │
 ├── store/
-│   └── teamStore.ts                     # Estado global con Zustand: añadir/borrar/reordenar/guardar/descartar los pokemons
+│   └── teamStore.js                     # Estado global con Zustand: añadir/borrar/reordenar/guardar/descartar los pokemons
 │
 ├── utils/
 │   └── battleLogic.js                   # Simulación y reglas de combate
 │
 ├── tests/
 │   ├── battleLogic.test.js               # Tests de lógica de combate
-│   └── PokemonList.test.js               # Tests de componentes
+│   └── PokemonList.test.js               # Tests de componente de listado de pokemons
 │
 ├── App.tsx                               # Componente raíz de la aplicación
 ├── main.tsx                              # Punto de entrada (React + Vite)
