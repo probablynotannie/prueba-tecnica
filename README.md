@@ -31,15 +31,16 @@ npm run dev
 
 ## Versiones utilizadas
 
-- Node.js: 18.x
-- React: 18.x
+- Node.js: 20.15.0
+- React: 19.2.0
 - Vite: 7.2.4
 - Tailwind CSS: 4.1.18
 - Zustand: 5.0.10
 - @dnd-kit/core: 6.3.1
+- @dnd-kit/sortable 10.0.0
 - tanstack: 5.90.17
 - react.icons 5.5.0
-- vitest 7.2.4
+- vitest 4.0.17
 
 
 ## Estructura de carpetas, archivos y arquitectura
