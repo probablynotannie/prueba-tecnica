@@ -26,7 +26,7 @@ function Filtering({ search, handleSearchChange, selectedType, handleTypeChange,
 
             <button
                 onClick={clearFilters}
-                className="hover:cursor-pointer col-span-12 md:col-span-1 bg-white rounded-lg border flex justify-center items-center border-slate-300 text-red-600 p-2e"
+                className="hover:cursor-pointer col-span-12 md:col-span-1 bg-white rounded-lg border flex justify-center items-center border-slate-300 text-slate-600 p-2"
             >
                 <IoIosRefresh />
             </button>
